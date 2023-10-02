@@ -1,0 +1,5 @@
+﻿  Source.cpp
+c:\users\ebona\documents\visual studio 2015\projects\bz-program-3\bz-program-3\source.cpp(81): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+c:\users\ebona\documents\visual studio 2015\projects\bz-program-3\bz-program-3\source.cpp(591): warning C4715: 'OpenFile': not all control paths return a value
+  BZ-program-3.vcxproj -> C:\Users\ebona\Documents\Visual Studio 2015\Projects\BZ-program-3\x64\Debug\BZ-program-3.exe
+  BZ-program-3.vcxproj -> C:\Users\ebona\Documents\Visual Studio 2015\Projects\BZ-program-3\x64\Debug\BZ-program-3.pdb (Partial PDB)

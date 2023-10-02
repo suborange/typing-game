@@ -1,0 +1,106 @@
+/*
+Text editor game. Give a sentence, maybe from list in text file, and linked lists to type text and compare it to the given sentence or paragraph? 
+Adds points or something for fun game// typing game. So typing correctly forst try more points, using backspace is small deduction, etc. 
+[prog 3 -typing game- linked lists,  dynamic memory, try and exceptions; typing game. from text file, display random words, and 
+you gotta follow and type. each sentence is a new dynamic memory, and then deleted after use. has a score. try for playing the game again, or
+bad characters? ] write out step by step for this
+
+from a text file of words, it creates random string of sentances to type. each word is inserted into a linked list. have a array or vector of linked lists consisting of words? 
+the user or player has to follow along and type the exact words. each character is compared, right char = +3, wrong =-4, backspace =-2?
+no symbols, use a try and except to catch the symbols, or other stuff. only lowercase letters? or is shift different than ctrl?
+so display a sentace, gotta type it, it is scored. then asks to play again. 
+
+NOTE: maybe instead of vector of linked list, do linked list of vector. the vector holds the words. 
+
+BRAINSTORM:
+( maybe add arrow key penalty?)
+hard mode with ctrl + backspace? etc? like other "time savers" (part 2)?
+
+maybe when hitting space, it enters the word, so if it is wrong it is wrong word. minus big points. 
+OR hitting space does nothing if it is not the last character(pointer == null)
+
+
+should it follow the word, or the word displays seperatly
+
+
+
+STEP BY STEP:
+tells the user the rules to the game.
+prompts the user to start playiyng the game.
+clears the screen an starts to play.
+play: grabs 1-8 words randomly from the file-> displays the full sentance on screen-> prompts user to start typing.
+then user types, one char at  time is compared, and then the score is determined. correct char = +3, wrong char = -4, backspace =-2
+
+
+[STEP]
+// [cS.0] MAIN FUNCTION - START HERE
+// [cS.1] DISPLAY BASIC GAME RULES - OUTPUT TEXT
+// [cS.2] SETUP GAME - PRESS ENTER TO CLEAR SCREEN AND CONTINUE TO PLAY
+// [cS.3] NEED FILE, CREATE OPEN A FILE FUNCTION
+// [cS.4] NEED FILE, CREATE CLOSE THE FILE FUNCTION
+// [cS.5] SETUP FILE - OPEN THE FILE, AND READ THE CONTENTS INTO VECTOR AND LINKED LIST
+// [cS.6] PLAY GAME - START THE GAME, CREATE VECTOR,  CREATE FSTREAM, CHECK FILE AND CALL OpenFile(), THEN CALL SetupFile(), CALL CloseFile(), CALL Play(), THEN FINALLY CALL Display()
+// [cS.7] PLAY - LOOP THROUGH THE VECOTR OF STARTING CHARS, THEN AFTER STARTING CHAR, LOOP AND POINT TO THE NEXT CHAR IN THE WORD. 
+DISPLAYS THE FULL WORD, THEN THE USER INPUTS, AND THEN FOR EACH CHAR CALL CompareChar() AND CalculateChar() and then disply what was input
+// [cS.7.5] - REFACTORED CODE 
+// [cS.8] COMPARE - COPMARE INPUT CHAR TO ALL CASES
+// [cS.9] CALCULATE - CALCULATE THE SCORE BASED OF IF COMPARISON CASES
+// [cS.10] DISPLAY - 
+// [cS.0.5] GOTOXY - TO MOVE THE CURSOR TO THE RIGHT PLACE ON THE CONSOLE. 
+
+
+TODO:
+what to dod if the whole word is wrong?what to dod if the whole word is wrong?
+
+
+how to handle the space. like does user enter space? how to go from word to word? maybe when space is entere it goes to next word in vector list?(this needsd to count for how many letters were typed, unless space make whols word wrong at -10 or omethin?
+keeping track of the length of the word. so knows when to move to next word
+fix the scoreboard - seems good enough atm
+should it display two words at a time rather than one?
+figure out if i want the sccore to be colored when added or subtracted, or another certain color? - rn its colored red/green
+
+space kinda works, i think i really need to redo the logic includinng the char counts
+*/
+
+
+
+
+
+DONE ATM: 
+
+testing: 
+[ten]
+1. enter t -> go normal
+	1.1 compare the chars	
+	1.2 display the user character
+	1.3 calculate score
+	1.4 updat and display score
+2. enter e -> go normal
+	2.1 compare the chars
+	2.2 display the user character
+	2.3 calculate score
+	2.4 updat and display score
+3. enter n -> go normal
+	3.1 compare the chars
+	3.2 display the user character
+	3.3 calculate score
+	3.4 updat and display score
+4. now at the end of the word
+4.1 enter char -> does nothing
+4.2 enter backspace -> does backspace
+	4.2.1 goes back one char
+	4.2.2 displays space over last char
+	4.2.3 updates score and redisplays
+4.3 enter space -> does space, and will move onto next word.
+
+
+
+space
+1- check to see if its at the end of the word. 
+1.1 either check the char count, is the current count = to the count of the keyword
+1.2 or put the space in the linked lists, and then check to see if its at the space char. ( all words are only one word anyway)
+
+2 once at the end of the word, its a special case, where logic should only apply for backspace to delete and go back, or for space to move on to the next word. 
+2.1 should there be 
+
+GOT IT 
